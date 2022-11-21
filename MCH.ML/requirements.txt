@@ -1,0 +1,20 @@
+fastapi>=0.68.0,<0.69.0
+pydantic>=1.8.0,<2.0.0
+uvicorn>=0.15.0,<0.16.0
+python-dotenv==0.19.0
+requests
+numpy
+transformers
+scikit-learn
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.7.1+cpu
+torchvision==0.8.2+cpu
+img2vec_pytorch
+tqdm
+pillow
+pandas
+hnswlib
+pickle-mixin
+pydantic
+typing
+psycopg2

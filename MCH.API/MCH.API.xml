@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MCH.API</name>
+    </assembly>
+    <members>
+        <member name="P:MCH.API.Configuration.AppSettings.DbConnection">
+            <summary>
+            Строка подключения к базе данных
+            </summary>
+        </member>
+        <member name="P:MCH.API.Configuration.AppSettings.MlApiUrl">
+            <summary>
+            Адрес апи с машинным обучением
+            </summary>
+        </member>
+        <member name="M:MCH.API.Controllers.CompaniesController.GetAllCompanies">
+            <summary>
+            Получение списка всех производителей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.CompaniesController.CreateCompany(MCH.API.Models.Company)">
+            <summary>
+            Создание производителя
+            </summary>
+            <param name="company"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.CompaniesController.GetCompanyByIIN(System.String)">
+            <summary>
+            Получение компании по ИНН
+            </summary>
+            <param name="INN">номер ИНН</param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ParsingController.createUrlToParse(MCH.API.Models.UrlsToParse)">
+            <summary>
+            Создание стартовой ссылкы, с который будет начинаться парсинг сайта
+            (может быть несклько для одного сайта)
+            </summary>
+            <param name="urlsToParse"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetProducts(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Получение списка товаров определенного производителя
+            </summary>
+            <param name="id">Id производителя</param>
+            <param name="count">Максимальное количетсво товаров в ответе</param>
+            <param name="offset">Спещение списка товаров</param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetProducts(System.Int32,System.Int32)">
+            <summary>
+            Получение списка товаров без ограничений по производителю
+            </summary>
+            <param name="count">Максимальное количетсво товаров в ответе</param>
+            <param name="offset">Спещение списка товаров</param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetProductsByQuery(System.String,System.Int32)">
+            <summary>
+            Получение списка товаров по строковому запросу (aka поиск)
+            </summary>
+            <param name="query">Поисковой запрос</param>
+            <param name="count">Максимальное количество товаров в ответе</param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetCountProducts(System.Int32)">
+            <summary>
+            Получение количество товаров у производителя
+            </summary>
+            <param name="companyId">Id производителя</param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetProductById(System.Int32)">
+            <summary>
+            Получение товара по Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MCH.API.Controllers.ProductsController.GetSimularProducts(System.Int32,System.Int32)">
+            <summary>
+            Позвращает список похожих товаров
+            </summary>
+            <param name="productId">Id товара</param>
+            <param name="count">Максимальное количество товаров в ответе</param>
+            <returns></returns>
+        </member>
+        <member name="T:MCH.API.ExternalServices.MlApi">
+            <summary>
+            Класс для работы с API
+            ML
+            </summary>
+        </member>
+    </members>
+</doc>
